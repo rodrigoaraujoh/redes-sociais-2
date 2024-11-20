@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais - Minha escola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Relatório das redes sociais</h1>
+        <nav>
+            <a href="index.html">Mundo</a>
+            <a href="indexescola.html">Minha escola</a>
+        </nav>
+    </header>
+
+    <h1 class="texto">Embora o <span>Instagram</span> ocupe a quarta posição em termos de número total de usuários entre as redes sociais, destaca-se como a <span>preferida pelos usuários</span>. Nada supera o <span>Classrom e o WhatsApp</span>, sendo as plataformas com mais usuários, estando emapatadas em 1° lugar opção apreciada pelos usuários. <br>Essa preferência evidencia a forte conexão e apreço que as pessoas têm pelo Instagram em comparação com outras redes sociais</h1>
+    <main class="graficos-section">
+        <section id="graficos-container" class="graficos-container">
+            <div>
+                <canvas id="myChart" style="width: 100px; height: 100px;"></canvas>
+           
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const ctx = document.getElementById('myChart');
+              
+                new Chart(ctx, {
+                  type: 'doughnut',
+                  data: {
+                    labels: ['Twitter', 'Youtube', 'WhatsApp', 'Instagram', 'Tiktok', 'Classrom'],
+                    datasets: [{
+                      label: '# votos',
+                      data: [349, 2259, 4310, 3889, 4200, 4310],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    }
+                  }
+                });
+              </script>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>Miguel Costa</p></p>
+    </footer>
+    
+</body>
+</html>
